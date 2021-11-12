@@ -1,0 +1,11 @@
+1. Copy your linklayer.c file and any auxiliary .c files (if any) into the "protocol/" folder.
+2. Compile the application and the virtual cable program using the provided Makefile.
+3. Run the virtual cable program: ./cable_app
+4. Test the protocol
+    4.1 Run the receiver: ./application_main /dev/ttyS11 tx penguin-received.gif
+    4.2 Run the transmitter: ./application_main /dev/ttyS10 rx penguin.gif
+    4.3 Should have received a nice looking penguin
+5. Test the protocol with cable unplugging and noise
+    5.1. Run receiver and transmitter again
+    5.2. Quickly move to the cable program console and press 0 for unplugging the cable, 2 to add noise, and 1 to normal
+    5.3. Should have received a nice looking penguin even if the cable disconnected or with noise added
